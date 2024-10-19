@@ -79,11 +79,7 @@ cd ..
 ``` bash
 pwd #This command displays the present working directory.
 ```
-3. **Initialize a Git Repository (if needed):** If you haven’t initialized a Git repository in this directory, run the following command to set it up:
 
-```bash
-git init
-```
 ## Clone your remote repository to your local machine
 
 3.  **Clone the Repository**: Open your terminal (or Git Bash on Windows) and run the following command:
@@ -98,13 +94,42 @@ git clone <repository-url> # That you copied as described above
 
 Once your repository is set up, you may want to pull changes from the remote repository to your local machine. This is how to do it:
 
-## Pull the latest changes
-
 ``` bash
 git pull
 ```
-
 This command fetches the changes from the remote repository **(on GitHub)** and merges them into your local copy.
+
+::: {.callout-note collapse="false"}
+## Note
+
+If you want to set or change your local branch (named master or main) to its upstream tracking to a remote branch, you can run the following command:
+
+``` bash
+git branch --set-upstream-to=<remote>/<branch> master
+```
+
+The command **git branch --set-upstream-to=**<remote>/<branch> master is used to set the upstream (or tracking) branch for your local master branch to a specified remote branch. Here's a breakdown of what each part of the command means:
+
+**Breakdown of the Command**
+
+-   **git branch**: This is the command used to manage branches in Git.
+
+-   **--set-upstream-to**: This option sets the specified remote branch as the upstream branch for the local branch. This establishes a tracking relationship between the local branch and the remote branch, making it easier to pull and push changes.
+
+-   **<remote>/<branch>**:
+
+    -   <remote> refers to the name of the remote repository (commonly origin, which is the default name when you clone a repository).
+    -   <branch> refers to the name of the branch on the remote repository that you want to track.
+
+-   **master**: This is the name of the local branch for which you are setting the upstream branch. In this case, it specifies that the local master branch will track the remote branch you defined. 
+
+If you would like to rename the local branch (master) to resemble remote branch (main). Use the following command:
+
+``` bash
+git branch -M main
+```
+:::
+
 
 ## Conclusion
 
