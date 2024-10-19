@@ -1,0 +1,113 @@
+---
+title: "Guide to Create Github Repository and Pull it to your Local Machine"
+author: "Martin Wanjiru"
+format: html
+toc: true
+toc-depth: 2
+---
+
+# Introduction
+
+In this guide, you'll learn how to create a GitHub repository and pull changes from it to your local machine. We will cover the basic Git and GitHub commands needed for these tasks.
+
+# Prerequisites
+
+-   A [GitHub account](https://github.com)
+-   Git installed on your local machine ([Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+-   Basic familiarity with the command line interface (CLI)
+
+# Creating a GitHub Repository
+
+Follow these steps to create a new GitHub repository:
+
+1.  **Sign in to GitHub**: Go to [GitHub](https://github.com) and sign in.
+2.  **Create a New Repository**:
+    -   On your GitHub homepage, click the **+** button in the upper right corner, then select **New repository**.
+    -   Fill out the repository details (repository name, description, visibility) and click **Create repository**.
+3.  **Initialize the Repository**:
+    -   Optionally, check the box for initializing the repository with a README file.
+    -   Add `.gitignore` or license files if needed.
+
+After completing these steps, you'll have a GitHub repository URL, which will be used in the next step.
+
+## Cloning the Repository to Your Local Machine
+
+To copy (clone) the newly created GitHub repository to your local machine:
+
+1.  **Copy the Repository URL**: On the repository page, click the green **Code** button and copy the HTTPS URL.
+
+2.  **Change the current directory if needed**: Open your terminal (or Git Bash on Windows) and run the following command:
+
+``` bash
+cd <directory path> # Change the current directory
+```
+
+## Examples
+
+I. **To go to a specific directory:**
+
+``` bash
+cd /path/to/directory
+```
+
+II. **To go to your home directory:**
+
+``` bash
+cd ~
+```
+
+III. **To go back to the previous directory you are in:**
+
+``` bash
+cd -
+```
+
+IV. **To navigate to a directory inside the current directory: If you are already in /home/username, and you want to go to Documents, just type:**
+
+``` bash
+cd Documents
+```
+
+V. **To go up one directory (move to the parent directory):**
+
+``` bash
+cd ..
+```
+
+**After changing the directory, you can verify your current location by running:**
+
+``` bash
+pwd #This command displays the present working directory.
+```
+3. **Initialize a Git Repository (if needed):** If you haven’t initialized a Git repository in this directory, run the following command to set it up:
+
+```bash
+git init
+```
+## Clone your remote repository to your local machine
+
+3.  **Clone the Repository**: Open your terminal (or Git Bash on Windows) and run the following command:
+
+``` bash
+git clone <repository-url> # That you copied as described above
+```
+
+**You now have a local copy of the repository on your machine.**
+
+## Pulling Changes from GitHub
+
+Once your repository is set up, you may want to pull changes from the remote repository to your local machine. This is how to do it:
+
+## Pull the latest changes
+
+``` bash
+git pull
+```
+
+This command fetches the changes from the remote repository **(on GitHub)** and merges them into your local copy.
+
+## Conclusion
+
+In this guide, you’ve learned how to create a GitHub repository, clone it to your local machine, and pull changes. These are essential steps for version control and collaborating on code with others.
+
+For more advanced Git commands and GitHub workflows, consult the official Git documentation.
