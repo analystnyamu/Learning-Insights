@@ -42,37 +42,39 @@ To copy (clone) the newly created GitHub repository to your local machine:
 cd <directory path> # Change the current directory
 ```
 
+::: {.callout-note collapse="false"}
 ## Examples
 
-I. **To go to a specific directory:**
+-   **To go to a specific directory:**
 
 ``` bash
 cd /path/to/directory
 ```
 
-II. **To go to your home directory:**
+-   **To go to your home directory:**
 
 ``` bash
 cd ~
 ```
 
-III. **To go back to the previous directory you are in:**
+-   **To go back to the previous directory you are in:**
 
 ``` bash
 cd -
 ```
 
-IV. **To navigate to a directory inside the current directory: If you are already in /home/username, and you want to go to Documents, just type:**
+-   **To navigate to a directory inside the current directory: If you are already in /home/username, and you want to go to Documents, just type:**
 
 ``` bash
 cd Documents
 ```
 
-V. **To go up one directory (move to the parent directory):**
+-   **To go up one directory (move to the parent directory):**
 
 ``` bash
 cd ..
 ```
+:::
 
 **After changing the directory, you can verify your current location by running:**
 
@@ -97,6 +99,7 @@ Once your repository is set up, you may want to pull changes from the remote rep
 ``` bash
 git pull
 ```
+
 This command fetches the changes from the remote repository **(on GitHub)** and merges them into your local copy.
 
 ::: {.callout-note collapse="false"}
@@ -108,20 +111,21 @@ If you want to set or change your local branch (named master or main) to its ups
 git branch --set-upstream-to=<remote>/<branch> master
 ```
 
-The command **git branch --set-upstream-to=**<remote>/<branch> master is used to set the upstream (or tracking) branch for your local master branch to a specified remote branch. Here's a breakdown of what each part of the command means:
+The command **git branch - -set-upstream-to=\<remote\>/\<branch\> master** is used to set the upstream (or tracking) branch for your local master branch to a specified remote branch. Here's a breakdown of what each part of the command means:
 
 **Breakdown of the Command**
 
 -   **git branch**: This is the command used to manage branches in Git.
 
--   **--set-upstream-to**: This option sets the specified remote branch as the upstream branch for the local branch. This establishes a tracking relationship between the local branch and the remote branch, making it easier to pull and push changes.
+-   **- -set-upstream-to**: This option sets the specified remote branch as the upstream branch for the local branch. This establishes a tracking relationship between the local branch and the remote branch, making it easier to pull and push changes.
 
--   **<remote>/<branch>**:
+-   \<**remote\>/\<branch**\>:
 
-    -   <remote> refers to the name of the remote repository (commonly origin, which is the default name when you clone a repository).
-    -   <branch> refers to the name of the branch on the remote repository that you want to track.
+    -   \<**remote**\> refers to the name of the remote repository (commonly origin, which is the default name when you clone a repository).
 
--   **master**: This is the name of the local branch for which you are setting the upstream branch. In this case, it specifies that the local master branch will track the remote branch you defined. 
+    -   \<**branch**\> refers to the name of the branch on the remote repository that you want to track.
+
+-   **master**: This is the name of the local branch for which you are setting the upstream branch. In this case, it specifies that the local master branch will track the remote branch you defined.
 
 If you would like to rename the local branch (master) to resemble remote branch (main). Use the following command:
 
@@ -129,7 +133,6 @@ If you would like to rename the local branch (master) to resemble remote branch 
 git branch -M main
 ```
 :::
-
 
 ## Conclusion
 

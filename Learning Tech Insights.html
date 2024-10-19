@@ -85,10 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creating-a-github-repository" id="toc-creating-a-github-repository" class="nav-link" data-scroll-target="#creating-a-github-repository">Creating a GitHub Repository</a>
   <ul class="collapse">
   <li><a href="#cloning-the-repository-to-your-local-machine" id="toc-cloning-the-repository-to-your-local-machine" class="nav-link" data-scroll-target="#cloning-the-repository-to-your-local-machine">Cloning the Repository to Your Local Machine</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   <li><a href="#clone-your-remote-repository-to-your-local-machine" id="toc-clone-your-remote-repository-to-your-local-machine" class="nav-link" data-scroll-target="#clone-your-remote-repository-to-your-local-machine">Clone your remote repository to your local machine</a></li>
   <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github">Pulling Changes from GitHub</a></li>
-  <li><a href="#pull-the-latest-changes" id="toc-pull-the-latest-changes" class="nav-link" data-scroll-target="#pull-the-latest-changes">Pull the latest changes</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
@@ -156,25 +154,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Change the current directory if needed</strong>: Open your terminal (or Git Bash on Windows) and run the following command:</p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>directory path<span class="op">&gt;</span> # Change the current directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p>I. <strong>To go to a specific directory:</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Examples
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>To go to a specific directory:</strong></li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /path/to/directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="2" type="I">
+<ul>
 <li><strong>To go to your home directory:</strong></li>
-</ol>
+</ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="I">
+<ul>
 <li><strong>To go back to the previous directory you are in:</strong></li>
-</ol>
+</ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="I">
+<ul>
 <li><strong>To navigate to a directory inside the current directory: If you are already in /home/username, and you want to go to Documents, just type:</strong></li>
-</ol>
+</ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>V. <strong>To go up one directory (move to the parent directory):</strong></p>
+<ul>
+<li><strong>To go up one directory (move to the parent directory):</strong></li>
+</ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <p><strong>After changing the directory, you can verify your current location by running:</strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="co">#This command displays the present working directory.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
@@ -189,11 +203,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pulling-changes-from-github" class="level2">
 <h2 class="anchored" data-anchor-id="pulling-changes-from-github">Pulling Changes from GitHub</h2>
 <p>Once your repository is set up, you may want to pull changes from the remote repository to your local machine. This is how to do it:</p>
-</section>
-<section id="pull-the-latest-changes" class="level2">
-<h2 class="anchored" data-anchor-id="pull-the-latest-changes">Pull the latest changes</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This command fetches the changes from the remote repository <strong>(on GitHub)</strong> and merges them into your local copy.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>If you want to set or change your local branch (named master or main) to its upstream tracking to a remote branch, you can run the following command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--set-upstream-to</span><span class="op">=&lt;</span>remote<span class="op">&gt;</span>/<span class="op">&lt;</span>branch<span class="op">&gt;</span> master</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command <strong>git branch - -set-upstream-to=&lt;remote&gt;/&lt;branch&gt; master</strong> is used to set the upstream (or tracking) branch for your local master branch to a specified remote branch. Here’s a breakdown of what each part of the command means:</p>
+<p><strong>Breakdown of the Command</strong></p>
+<ul>
+<li><p><strong>git branch</strong>: This is the command used to manage branches in Git.</p></li>
+<li><p><strong>- -set-upstream-to</strong>: This option sets the specified remote branch as the upstream branch for the local branch. This establishes a tracking relationship between the local branch and the remote branch, making it easier to pull and push changes.</p></li>
+<li><p>&lt;<strong>remote&gt;/&lt;branch</strong>&gt;:</p>
+<ul>
+<li><p>&lt;<strong>remote</strong>&gt; refers to the name of the remote repository (commonly origin, which is the default name when you clone a repository).</p></li>
+<li><p>&lt;<strong>branch</strong>&gt; refers to the name of the branch on the remote repository that you want to track.</p></li>
+</ul></li>
+<li><p><strong>master</strong>: This is the name of the local branch for which you are setting the upstream branch. In this case, it specifies that the local master branch will track the remote branch you defined.</p></li>
+</ul>
+<p>If you would like to rename the local branch (master) to resemble remote branch (main). Use the following command:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
