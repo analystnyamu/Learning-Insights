@@ -1,0 +1,21 @@
+---
+title: "Introduction"
+format: html
+editor: visual
+---
+
+# Introduction
+
+In this guide, you'll learn how to use GitHub with R to produce Quarto documents and integrate Python code with R. We will cover the essential steps to create a GitHub repository, pull changes to your local machine, and utilize basic Git and GitHub commands required for these tasks. By the end of this guide, you will have a solid foundation for managing your projects effectively.
+
+```{r, code-fold=true}
+# This is a long code chunk that can be folded
+data(mtcars)
+summary(mtcars)
+```
+
+# Prerequisites
+
+-   A [GitHub account](https://github.com)
+-   Git installed on your local machine ([Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+-   Basic familiarity with the command line interface (CLI)

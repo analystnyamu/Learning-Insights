@@ -1,0 +1,22 @@
+---
+title: "How to Push Changes to GitHub"
+format: html
+editor: visual
+---
+
+## Introduction
+
+This guide explains how to push changes from your local Git repository to a remote GitHub repository. Follow these steps to ensure your local changes are successfully pushed to GitHub.
+
+## Prerequisites
+
+1.  You have a GitHub account.
+2.  You have already set up a repository on GitHub.
+3.  Git is installed on your local machine.
+4.  Your local project is initialized as a Git repository.
+
+### Step 1: Initialize Your Git Repository
+
+If your project is not yet a Git repository, initialize it using:
+
+\`\`\`bash git init

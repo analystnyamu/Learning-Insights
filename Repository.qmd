@@ -143,6 +143,8 @@ If you want Quarto to automatically open the rendered HTML file in your browser,
 ```bash
 quarto render document.qmd --to html --open
 ```
+
+**Note:** Make sure to enclose the file name in quotes if it contains spaces
 :::
 
 ## Conclusion
