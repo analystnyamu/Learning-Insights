@@ -132,6 +132,17 @@ If you would like to rename the local branch (master) to resemble remote branch 
 ``` bash
 git branch -M main
 ```
+**To render into HTML document, run the following command:**
+
+```bash
+quarto render document.qmd --to html # Replace document.qmd with the name of your Quarto file.
+```
+
+If you want Quarto to automatically open the rendered HTML file in your browser, you can add the --open option:
+
+```bash
+quarto render document.qmd --to html --open
+```
 :::
 
 ## Conclusion
