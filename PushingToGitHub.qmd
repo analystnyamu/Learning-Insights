@@ -19,4 +19,6 @@ This guide explains how to push changes from your local Git repository to a remo
 
 If your project is not yet a Git repository, initialize it using:
 
-\`\`\`bash git init
+```{bash}
+git init
+```

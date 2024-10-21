@@ -1,0 +1,48 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Guide to Using GitHub with R and Quarto Documents"
+  author: "Martin Wanjiru"
+  date: "20 Oct 2024"
+
+  search: true
+  repo-url: https://github.com/analystnyamu/Learning-Insights/
+  repo-branch: main
+  repo-actions: [issue]
+  downloads: [epub,pdf]  # Removed pdf from downloads
+  sharing: [twitter, facebook]
+
+  chapters:
+    - index.qmd
+    - Introduction.qmd
+    - QuartoDoc.qmd
+    - Repository.qmd
+    - PushingToGitHub.qmd
+
+metadata:
+  crossref:
+    chapters: true
+  documentclass: scrbook
+  documentclassoptions: [openany]
+  comments:
+    hypothesis: true
+  # Math and header includes remain unchanged
+
+format:
+  html:
+    theme:
+      - cosmo
+    code-link: true
+    toc: true
+    number-sections: true
+    colorlinks: true
+    author-meta: "Martin Nyamu & Kenneth Gatungo"
+    # Avoiding a single-page format
+    paginate: true                   # Ensure pagination is enabled
+    toc-depth: 2  # Define the depth of sections in the TOC
+    number-chapters: true
+    next-chapter: true              # Include next chapter navigation
+    previous-chapter: true          # Include previous chapter navigation
+    

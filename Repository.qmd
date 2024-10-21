@@ -1,20 +1,10 @@
 ---
-title: "Guide to Create Github Repository and Pull it to your Local Machine"
+title: "To Create Github Repository and Pull it to your Local Machine"
 author: "Martin Wanjiru"
 format: html
 toc: true
 toc-depth: 2
 ---
-
-# Introduction
-
-In this guide, you'll learn how to create a GitHub repository and pull changes from it to your local machine. We will cover the basic Git and GitHub commands needed for these tasks.
-
-# Prerequisites
-
--   A [GitHub account](https://github.com)
--   Git installed on your local machine ([Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
--   Basic familiarity with the command line interface (CLI)
 
 # Creating a GitHub Repository
 
@@ -38,7 +28,7 @@ To copy (clone) the newly created GitHub repository to your local machine:
 
 2.  **Change the current directory if needed**: Open your terminal (or Git Bash on Windows) and run the following command:
 
-``` bash
+```{bash}
 cd <directory path> # Change the current directory
 ```
 
@@ -47,38 +37,38 @@ cd <directory path> # Change the current directory
 
 -   **To go to a specific directory:**
 
-``` bash
+```{bash}
 cd /path/to/directory
 ```
 
 -   **To go to your home directory:**
 
-``` bash
+```{bash}
 cd ~
 ```
 
 -   **To go back to the previous directory you are in:**
 
-``` bash
+```{bash}
 cd -
 ```
 
 -   **To navigate to a directory inside the current directory: If you are already in /home/username, and you want to go to Documents, just type:**
 
-``` bash
+```{bash}
 cd Documents
 ```
 
 -   **To go up one directory (move to the parent directory):**
 
-``` bash
+```{bash}
 cd ..
 ```
 :::
 
 **After changing the directory, you can verify your current location by running:**
 
-``` bash
+```{bash}
 pwd #This command displays the present working directory.
 ```
 
@@ -86,7 +76,7 @@ pwd #This command displays the present working directory.
 
 3.  **Clone the Repository**: Open your terminal (or Git Bash on Windows) and run the following command:
 
-``` bash
+```{bash}
 git clone <repository-url> # That you copied as described above
 ```
 
@@ -96,7 +86,7 @@ git clone <repository-url> # That you copied as described above
 
 Once your repository is set up, you may want to pull changes from the remote repository to your local machine. This is how to do it:
 
-``` bash
+```{bash}
 git pull
 ```
 
@@ -107,7 +97,7 @@ This command fetches the changes from the remote repository **(on GitHub)** and 
 
 If you want to set or change your local branch (named master or main) to its upstream tracking to a remote branch, you can run the following command:
 
-``` bash
+```{bash}
 git branch --set-upstream-to=<remote>/<branch> master
 ```
 
@@ -129,18 +119,18 @@ The command **git branch - -set-upstream-to=\<remote\>/\<branch\> master** is us
 
 If you would like to rename the local branch (master) to resemble remote branch (main). Use the following command:
 
-``` bash
+```{bash}
 git branch -M main
 ```
 **To render into HTML document, run the following command:**
 
-```bash
+```{bash}
 quarto render document.qmd --to html # Replace document.qmd with the name of your Quarto file.
 ```
 
 If you want Quarto to automatically open the rendered HTML file in your browser, you can add the --open option:
 
-```bash
+```{bash}
 quarto render document.qmd --to html --open
 ```
 
@@ -149,6 +139,6 @@ quarto render document.qmd --to html --open
 
 ## Conclusion
 
-In this guide, you’ve learned how to create a GitHub repository, clone it to your local machine, and pull changes. These are essential steps for version control and collaborating on code with others.
+In this guide, you will learned how to create a GitHub repository, clone it to your local machine, and pull changes. These are essential steps for version control and collaborating on code with others.
 
 For more advanced Git commands and GitHub workflows, consult the official Git documentation.

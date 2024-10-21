@@ -94,7 +94,7 @@ This is a simple Quarto document. You can use **bold** text, *italic* text, and 
 
 -   **Code Chunks**: Insert code chunks with the following syntax:
 
-```{r, code-fold=true}
+```{r}
 # R code goes here
 summary(cars)
 ```
