@@ -116,3 +116,5 @@ Example:
 print("This is a Python print statement")
 ```
 
+ssh-keygen -t ed25519 -C "analystnyamu79@gmail.com"
+

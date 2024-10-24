@@ -8,6 +8,8 @@ editor: visual
 
 To install Python packages in R, you can use the reticulate package, which provides an interface to run Python code and manage Python environments within R. Here’s how to install and use Python packages in R:
 
+## Steps To Follow
+
 1.  **Install and Load the reticulate Package**
 
 First, install and load the reticulate package in R. This package allows you to work with Python in R.

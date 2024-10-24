@@ -102,7 +102,7 @@ This is a simple Quarto document. You can use **bold** text, *italic* text, and 
 -   **Code Chunks**: Insert code chunks with the following syntax:
 
 
-```{r}
+```{r, eval = FALSE}
 # R code goes here
 summary(cars)
 ```

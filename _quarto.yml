@@ -20,6 +20,9 @@ book:
     - QuartoDoc.qmd
     - Repository.qmd
     - PushingToGitHub.qmd
+    - Python_inR.qmd
+    - PythonCode.qmd
+  
 
 metadata:
   crossref:
