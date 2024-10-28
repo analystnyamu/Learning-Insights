@@ -13,4 +13,4 @@ In this guide, you'll learn how to create a GitHub repository and pull changes f
 
 # Read in HTML Format
 
-[Read the the Book in HTML Format](/_book/index.html)
+[Read the the Book in HTML Format](https://analystnyamu.github.io/Learning-Insights/index.html).
