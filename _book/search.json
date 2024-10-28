@@ -1,5 +1,25 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Guide to Using GitHub with R and Quarto Documents",
+    "section": "",
+    "text": "Preface\nThis book, Enlightening Mathematics Revision Book Volume 1, serves as a comprehensive revision guide for students, particularly at the secondary school level. It covers a range of foundational topics in mathematics, structured to support students in mastering key mathematical concepts and problem-solving techniques. The book is carefully curated to make challenging concepts easier to understand, with detailed explanations, worked examples, and practice exercises.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "Introduction.html",
+    "href": "Introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "2 Introduction\nIn this guide, you’ll learn how to use GitHub with R to produce Quarto documents and integrate Python code with R. We will cover the essential steps to create a GitHub repository, pull changes to your local machine, and utilize basic Git and GitHub commands required for these tasks. By the end of this guide, you will have a solid foundation for managing your projects effectively.\n\n\n3 Prerequisites\n\nA GitHub account\nGit installed on your local machine (Git installation guide)\nBasic familiarity with the command line interface (CLI)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
     "objectID": "QuartoDoc.html",
     "href": "QuartoDoc.html",
     "title": "\n2  Quarto Documents\n",
@@ -37,66 +57,6 @@
     "text": "3.3 Narrative Text\nUse Markdown to format your text, as shown below:\n## Introduction\n\nThis is a simple Quarto document. You can use **bold** text, *italic* text, and create lists:\n\n- Item 1\n- Item 2\n\n\nCode Chunks: Insert code chunks with the following syntax:\n\n\n# R code example\n#summary(cars)\n\n\n# Python code goes here\n#import numpy as np\n#np.random.rand(5)\n\nStep 4: Render the Document\nTo render the document into the desired output format (HTML, PDF, etc.), use the following command in the terminal or RStudio:\nquarto render my_document.qmd --to html\nIf you want to open the rendered document immediately, use:\nquarto render my_document.qmd --to html --open\n\n\n\n\n\n\nAdditional Tips\n\n\n\n\n\n\nCustomize Your Document: You can customize the appearance and layout of your Quarto documents using themes and templates. Refer to the Quarto documentation for more details.\nUse Code Folding: Consider enabling code folding for long code chunks to make your document cleaner and more navigable.\nLeverage Quarto’s Features: Take advantage of features like cross-references and citations to create a more dynamic and interconnected document.\nPublishing: Quarto supports publishing documents directly to platforms like GitHub Pages or RStudio Connect.\nVersion Control: Integrate Quarto documents with Git and GitHub for version control and collaboration.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Quarto Documents</span>"
-    ]
-  },
-  {
-    "objectID": "Python_inR.html",
-    "href": "Python_inR.html",
-    "title": "5  Installing Python Packages in R",
-    "section": "",
-    "text": "5.1 How to intall python packages in R\nTo install Python packages in R, you can use the reticulate package, which provides an interface to run Python code and manage Python environments within R. Here’s how to install and use Python packages in R:",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Installing Python Packages in R</span>"
-    ]
-  },
-  {
-    "objectID": "Python_inR.html#steps-to-follow",
-    "href": "Python_inR.html#steps-to-follow",
-    "title": "5  Installing Python Packages in R",
-    "section": "5.2 Steps To Follow",
-    "text": "5.2 Steps To Follow\n\nInstall and Load the reticulate Package\n\nFirst, install and load the reticulate package in R. This package allows you to work with Python in R.\ninstall.packages(\"reticulate\")\nlibrary(reticulate)\n\nSpecify or Use a Python Environment\n\nreticulate can work with your existing Python environments (such as those created by Anaconda) or with a new environment created in R.\n\nTo use a Conda environment (if you’re using Anaconda):\n\nSpecify the Python environment (replace “your_conda_env” with the name of your environment):\nuse_condaenv(\"C:\\\\Users\\DELL\\\\anaconda3\", required = TRUE)\nYou can also list available conda environments using:\nconda_list()\n\nTo use a specific Python version:\n\nIf you want to point directly to a Python executable (e.g., /usr/bin/python):\nuse_python(\"/path/to/python\", required = TRUE)\n\nInstall Python Packages via reticulate\n\nYou can install Python packages directly from R using py_install(), which wraps the installation process of pip or conda.\n\nUsing pip to install Python packages:\n\npy_install(\"package_name\")\nThis command installs the specified Python package (e.g., “numpy”, “pandas”, etc.) into your current Python environment.\n\nUsing conda to install Python packages (if using a Conda environment):\n\nconda_install(\"your_conda_env\", \"package_name\")\nReplace “your_conda_env” with the name of your Conda environment and “package_name” with the name of the Python package you want to install.\n\nUsing the Installed Python Package in R\n\nlibrary(reticulate)\nnumpy &lt;- import(\"numpy\")\nprint(numpy$array(c(1, 2, 3)))\nThis example shows how to import the numpy Python library and use it within R.\n\n\n\n\n\n\nExample Workflow\n\n\n\n\n\nHere’s an example of how to install and use the pandas Python package in R: After installing the Python package, you can import and use it in R:\n# Install reticulate package\ninstall.packages(\"reticulate\")\n\n# Load reticulate\nlibrary(reticulate)\n\n# Use or specify a Python environment (optional, if using `conda`)\nuse_condaenv(\"base\", required = TRUE)  # Using the base conda environment\n\n# Install pandas package in Python\npy_install(\"pandas\")\n\n# Import and use pandas in R\npandas &lt;- import(\"pandas\")\ndf &lt;- pandas$DataFrame(dict(a = c(1, 2, 3), b = c(4, 5, 6)))\nprint(df)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Installing Python Packages in R</span>"
-    ]
-  },
-  {
-    "objectID": "PythonCode.html",
-    "href": "PythonCode.html",
-    "title": "6  Python Code in Quarto Document",
-    "section": "",
-    "text": "6.1 Use of Python Code in Quarto Document\nTo use Python code in a Quarto document, you can embed Python code chunks in your .qmd file. Quarto supports several programming languages, including Python, and allows you to execute code in the document, similar to how Jupyter Notebooks work.\nHere’s how to include and run Python code in a Quarto document.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Python Code in Quarto Document</span>"
-    ]
-  },
-  {
-    "objectID": "PythonCode.html#steps-to-follow",
-    "href": "PythonCode.html#steps-to-follow",
-    "title": "6  Python Code in Quarto Document",
-    "section": "6.2 Steps To Follow",
-    "text": "6.2 Steps To Follow\n\nInstall Required Tools\n\n\nMake sure you have Python installed.\nInstall Jupyter if you haven’t already, as Quarto uses Jupyter to execute Python code.\n\nYou can install Jupyter using the following command:\npip install jupyter\n\nSet up Quarto\n\n\nInstall Quarto if you haven’t done so. You can download and install it from quarto.org\n\n\nWrite Python Code in Quarto Document\n\nIn your Quarto document (.qmd), you can include Python code chunks by specifying {python} at the start of the chunk.\n---\ntitle: \"Python in Quarto\"\nformat:\n  html: default\n  pdf: default\n---\n\n# Python Example in Quarto\n\nHere’s a simple Python example embedded in a Quarto document.\n\n# Python code\nimport numpy as np\n\n# Generate random numbers\nrandom_numbers = np.random.rand(5)\nrandom_numbers\n\n### 4. Render the Quarto Document\n\nYou can render the Quarto document using:\n\n- In the terminal: \n\nquarto render your_document.qmd\n\nIn Visual Studio Code or RStudio: Use the Render button if you are working with these editors. The output will include both the code and its result in the specified format (HTML, PDF, etc.).\n\n\nOutput Formats\n\nQuarto supports various output formats (e.g., HTML, PDF, MS Word). Specify the format in the YAML header at the top of your .qmd file:\n---\ntitle: \"Python Example in Quarto\"\nformat: \n  html: default\n  pdf: default\n---\nExample of a Full Quarto Document with Python Code\n---\ntitle: \"Python in Quarto Example\"\nformat: html\n---\n\n# Using Python in Quarto\n\nYou can run Python code directly within Quarto documents.\n\n# Import the necessary library\nimport numpy as np\n\n# Generate 10 random numbers\nrandom_numbers = np.random.rand(10)\nrandom_numbers\nThe output of the Python code will be rendered inline in your document.\n\n### 6. Additional Tips\n- **Code Chunk Options**: You can control the output behavior of Python code chunks using options like `echo`, `eval`, `include`, and `results`.\n  - `echo`: Whether to show the code in the output (`true` or `false`).\n  - `eval`: Whether to evaluate the code chunk (`true` or `false`).\n  - `results`: How to display the results (`\"asis\"` for raw output, `\"hide\"` to hide results).\n\nExample:\nprint(\"This is a Python print statement\")\nssh-keygen -t ed25519 -C “analystnyamu79@gmail.com”",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Python Code in Quarto Document</span>"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Guide to Using GitHub with R and Quarto Documents",
-    "section": "",
-    "text": "Preface\nThis book, Enlightening Mathematics Revision Book Volume 1, serves as a comprehensive revision guide for students, particularly at the secondary school level. It covers a range of foundational topics in mathematics, structured to support students in mastering key mathematical concepts and problem-solving techniques. The book is carefully curated to make challenging concepts easier to understand, with detailed explanations, worked examples, and practice exercises.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "Introduction.html",
-    "href": "Introduction.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "2 Introduction\nIn this guide, you’ll learn how to use GitHub with R to produce Quarto documents and integrate Python code with R. We will cover the essential steps to create a GitHub repository, pull changes to your local machine, and utilize basic Git and GitHub commands required for these tasks. By the end of this guide, you will have a solid foundation for managing your projects effectively.\n\n\n3 Prerequisites\n\nA GitHub account\nGit installed on your local machine (Git installation guide)\nBasic familiarity with the command line interface (CLI)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
@@ -167,6 +127,46 @@
     "text": "4.2 Prerequisites\n\nYou have a GitHub account.\nYou have already set up a repository on GitHub.\nGit is installed on your local machine.\nYour local project is initialized as a Git repository.\n\n\n4.2.1 Step 1: Initialize Your Git Repository\nIf your project is not yet a Git repository, initialize it using:\ngit init",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>How to Push Changes to GitHub</span>"
+    ]
+  },
+  {
+    "objectID": "Python_inR.html",
+    "href": "Python_inR.html",
+    "title": "5  Installing Python Packages in R",
+    "section": "",
+    "text": "5.1 How to intall python packages in R\nTo install Python packages in R, you can use the reticulate package, which provides an interface to run Python code and manage Python environments within R. Here’s how to install and use Python packages in R:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Installing Python Packages in R</span>"
+    ]
+  },
+  {
+    "objectID": "Python_inR.html#steps-to-follow",
+    "href": "Python_inR.html#steps-to-follow",
+    "title": "5  Installing Python Packages in R",
+    "section": "5.2 Steps To Follow",
+    "text": "5.2 Steps To Follow\n\nInstall and Load the reticulate Package\n\nFirst, install and load the reticulate package in R. This package allows you to work with Python in R.\ninstall.packages(\"reticulate\")\nlibrary(reticulate)\n\nSpecify or Use a Python Environment\n\nreticulate can work with your existing Python environments (such as those created by Anaconda) or with a new environment created in R.\n\nTo use a Conda environment (if you’re using Anaconda):\n\nSpecify the Python environment (replace “your_conda_env” with the name of your environment):\nuse_condaenv(\"C:\\\\Users\\DELL\\\\anaconda3\", required = TRUE)\nYou can also list available conda environments using:\nconda_list()\n\nTo use a specific Python version:\n\nIf you want to point directly to a Python executable (e.g., /usr/bin/python):\nuse_python(\"/path/to/python\", required = TRUE)\n\nInstall Python Packages via reticulate\n\nYou can install Python packages directly from R using py_install(), which wraps the installation process of pip or conda.\n\nUsing pip to install Python packages:\n\npy_install(\"package_name\")\nThis command installs the specified Python package (e.g., “numpy”, “pandas”, etc.) into your current Python environment.\n\nUsing conda to install Python packages (if using a Conda environment):\n\nconda_install(\"your_conda_env\", \"package_name\")\nReplace “your_conda_env” with the name of your Conda environment and “package_name” with the name of the Python package you want to install.\n\nUsing the Installed Python Package in R\n\nlibrary(reticulate)\nnumpy &lt;- import(\"numpy\")\nprint(numpy$array(c(1, 2, 3)))\nThis example shows how to import the numpy Python library and use it within R.\n\n\n\n\n\n\nExample Workflow\n\n\n\n\n\nHere’s an example of how to install and use the pandas Python package in R: After installing the Python package, you can import and use it in R:\n# Install reticulate package\ninstall.packages(\"reticulate\")\n\n# Load reticulate\nlibrary(reticulate)\n\n# Use or specify a Python environment (optional, if using `conda`)\nuse_condaenv(\"base\", required = TRUE)  # Using the base conda environment\n\n# Install pandas package in Python\npy_install(\"pandas\")\n\n# Import and use pandas in R\npandas &lt;- import(\"pandas\")\ndf &lt;- pandas$DataFrame(dict(a = c(1, 2, 3), b = c(4, 5, 6)))\nprint(df)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Installing Python Packages in R</span>"
+    ]
+  },
+  {
+    "objectID": "PythonCode.html",
+    "href": "PythonCode.html",
+    "title": "6  Python Code in Quarto Document",
+    "section": "",
+    "text": "6.1 Use of Python Code in Quarto Document\nTo use Python code in a Quarto document, you can embed Python code chunks in your .qmd file. Quarto supports several programming languages, including Python, and allows you to execute code in the document, similar to how Jupyter Notebooks work.\nHere’s how to include and run Python code in a Quarto document.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Python Code in Quarto Document</span>"
+    ]
+  },
+  {
+    "objectID": "PythonCode.html#steps-to-follow",
+    "href": "PythonCode.html#steps-to-follow",
+    "title": "6  Python Code in Quarto Document",
+    "section": "6.2 Steps To Follow",
+    "text": "6.2 Steps To Follow\n\nInstall Required Tools\n\n\nMake sure you have Python installed.\nInstall Jupyter if you haven’t already, as Quarto uses Jupyter to execute Python code.\n\nYou can install Jupyter using the following command:\npip install jupyter\n\nSet up Quarto\n\n\nInstall Quarto if you haven’t done so. You can download and install it from quarto.org\n\n\nWrite Python Code in Quarto Document\n\nIn your Quarto document (.qmd), you can include Python code chunks by specifying {python} at the start of the chunk.\n---\ntitle: \"Python in Quarto\"\nformat:\n  html: default\n  pdf: default\n---\n\n# Python Example in Quarto\n\nHere’s a simple Python example embedded in a Quarto document.\n\n# Python code\nimport numpy as np\n\n# Generate random numbers\nrandom_numbers = np.random.rand(5)\nrandom_numbers\n\n### 4. Render the Quarto Document\n\nYou can render the Quarto document using:\n\n- In the terminal: \n\nquarto render your_document.qmd\n\nIn Visual Studio Code or RStudio: Use the Render button if you are working with these editors. The output will include both the code and its result in the specified format (HTML, PDF, etc.).\n\n\nOutput Formats\n\nQuarto supports various output formats (e.g., HTML, PDF, MS Word). Specify the format in the YAML header at the top of your .qmd file:\n---\ntitle: \"Python Example in Quarto\"\nformat: \n  html: default\n  pdf: default\n---\nExample of a Full Quarto Document with Python Code\n---\ntitle: \"Python in Quarto Example\"\nformat: html\n---\n\n# Using Python in Quarto\n\nYou can run Python code directly within Quarto documents.\n\n# Import the necessary library\nimport numpy as np\n\n# Generate 10 random numbers\nrandom_numbers = np.random.rand(10)\nrandom_numbers\nThe output of the Python code will be rendered inline in your document.\n\n### 6. Additional Tips\n- **Code Chunk Options**: You can control the output behavior of Python code chunks using options like `echo`, `eval`, `include`, and `results`.\n  - `echo`: Whether to show the code in the output (`true` or `false`).\n  - `eval`: Whether to evaluate the code chunk (`true` or `false`).\n  - `results`: How to display the results (`\"asis\"` for raw output, `\"hide\"` to hide results).\n\nExample:\nprint(\"This is a Python print statement\")\nssh-keygen -t ed25519 -C “analystnyamu79@gmail.com”",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Python Code in Quarto Document</span>"
     ]
   }
 ]
