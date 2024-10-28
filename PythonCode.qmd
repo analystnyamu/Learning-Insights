@@ -8,15 +8,15 @@ editor: visual
 
 To use Python code in a Quarto document, you can embed Python code chunks in your `.qmd` file. Quarto supports several programming languages, including Python, and allows you to execute code in the document, similar to how `Jupyter Notebooks` work.
 
-Here’s how to include and run Python code in a Quarto document.
+Here's how to include and run Python code in a Quarto document.
 
 ## Steps To Follow
 
-1. **Install Required Tools**
+1.  **Install Required Tools**
 
-*   Make sure you have **Python** installed.
+-   Make sure you have **Python** installed.
 
-*   Install **Jupyter** if you haven't already, as Quarto uses Jupyter to execute Python code.
+-   Install **Jupyter** if you haven't already, as Quarto uses Jupyter to execute Python code.
 
 You can install Jupyter using the following command:
 
@@ -24,11 +24,11 @@ You can install Jupyter using the following command:
 pip install jupyter
 ```
 
-2. **Set up Quarto**
+2.  **Set up Quarto**
 
-*   Install Quarto if you haven't done so. You can download and install it from [quarto.org](https://quarto.org/)
+-   Install Quarto if you haven't done so. You can download and install it from [quarto.org](https://quarto.org/)
 
-3. **Write Python Code in Quarto Document**
+3.  **Write Python Code in Quarto Document**
 
 In your Quarto document `(.qmd)`, you can include Python code chunks by specifying `{python}` at the start of the chunk.
 
@@ -44,7 +44,6 @@ format:
 
 Here’s a simple Python example embedded in a Quarto document.
 
-```{python}
 # Python code
 import numpy as np
 
@@ -64,10 +63,9 @@ You can render the Quarto document using:
 quarto render your_document.qmd
 ```
 
-*   In Visual Studio Code or RStudio: Use the **Render** button if you are working with these editors.
-The output will include both the code and its result in the specified format (HTML, PDF, etc.).
+-   In Visual Studio Code or RStudio: Use the **Render** button if you are working with these editors. The output will include both the code and its result in the specified format (HTML, PDF, etc.).
 
-5. **Output Formats**
+5.  **Output Formats**
 
 Quarto supports various output formats (e.g., HTML, PDF, MS Word). Specify the format in the YAML header at the top of your .qmd file:
 
@@ -92,7 +90,6 @@ format: html
 
 You can run Python code directly within Quarto documents.
 
-```{python}
 # Import the necessary library
 import numpy as np
 
@@ -112,9 +109,7 @@ The output of the Python code will be rendered inline in your document.
   - `results`: How to display the results (`"asis"` for raw output, `"hide"` to hide results).
 
 Example:
-```{python, echo=true, eval=true, results="asis"}
 print("This is a Python print statement")
 ```
 
-ssh-keygen -t ed25519 -C "analystnyamu79@gmail.com"
-
+ssh-keygen -t ed25519 -C "analystnyamu79\@gmail.com"

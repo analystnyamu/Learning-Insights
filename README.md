@@ -10,3 +10,7 @@ In this guide, you'll learn how to create a GitHub repository and pull changes f
 -   A [GitHub account](https://github.com)
 -   Git installed on your local machine ([Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 -   Basic familiarity with the command line interface (CLI)
+
+# Read in HTML Format
+
+[Read the the Book in HTML Format](/_book/index.html)

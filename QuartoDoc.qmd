@@ -1,89 +1,52 @@
 ---
 title: "Quarto Documents"
+author: "Your Name"
+date: "2024-10-20"
 format: html
 editor: visual
 ---
 
 # Quarto Documents
 
-Quarto documents are a type of document used for dynamic reporting, data analysis, and creating reproducible research. They are similar to R Markdown files but offer enhanced features and support for multiple programming languages, including R, Python, and Julia.
+Quarto documents are used for dynamic reporting, data analysis, and creating reproducible research. They are similar to R Markdown files but offer enhanced features and support for multiple programming languages, including R, Python, and Julia.
 
 ## Key Features of Quarto Documents
 
--   **Markdown Support**: Quarto uses Markdown syntax for formatting text.
+- **Markdown Support**: Quarto uses Markdown syntax for formatting text.
+- **Code Chunks**: You can include code from R, Python, or other languages, with output displayed inline or as separate results.
+- **Multi-Format Output**: You can render Quarto documents to various formats, including HTML, PDF, and Word.
+- **Narrative Text**: Use plain text formatted with Markdown for headings, lists, links, images, etc.
+- **Embedded Outputs**: Results from code chunks, like tables and plots, are embedded directly in the document.
+- **Cross-references**: Quarto supports cross-referencing figures, tables, and sections, enhancing document structure.
 
--   **Code Chunks**: You can include code from R, Python, or other languages, and the output can be displayed inline or as separate results.
+## How to Use Quarto Documents
 
--   **Multi-Format Output**: You can render Quarto documents to various formats, including HTML, PDF, and Word.
+### Step 1: Install Quarto
+- Download and install Quarto from the [Quarto website](https://quarto.org/docs/websites/).
+- If you use RStudio, update it to the latest version for compatibility.
 
--   **Narrative Text**: You can write plain text, formatted with Markdown for headings, lists, links, images, and more.
+### Step 2: Create a New Quarto Document
 
--   **Embedded Outputs**: Results from code chunks can be embedded directly into the document, including tables, plots, and statistical summaries.
+1. **In RStudio**:
+   - Go to **File > New File > Quarto Document**.
+   - Choose a template if prompted, and save the file with a **.qmd** extension.
 
--   **Cross-references**: Quarto allows you to cross-reference figures, tables, and sections, enhancing the document’s structure.
+2. **Using the Command Line**:
+   - Run the following command to create a new Quarto file:
 
-How to Use Quarto Documents Step 1: Install Quarto Download and install Quarto from the Quarto website. If you're using RStudio, ensure it is updated to the latest version for the best compatibility. Step 2: Create a New Quarto Document In RStudio:
+     ```
+     quarto create my_document.qmd
+     ```
 
-Go to File **\> New File \>** Quarto Document. Choose a template if prompted, and save the file with a **.qmd** extension. Using the Command Line:
+### Step 3: Write Your Quarto Document
 
-# Quarto Documents
+- **Header**: At the top of the document, specify metadata in YAML format:
 
-Quarto documents are a type of document used for dynamic reporting, data analysis, and creating reproducible research. They are similar to R Markdown files but offer enhanced features and support for multiple programming languages, including R, Python, and Julia.
+## Narrative Text
 
-## Key Features of Quarto Documents
+Use Markdown to format your text, as shown below:
 
--   **Markdown Support**: Quarto uses Markdown syntax for formatting text.
-
--   **Code Chunks**: You can include code from R, Python, or other languages, and the output can be displayed inline or as separate results.
-
--   **Multi-Format Output**: You can render Quarto documents to various formats, including HTML, PDF, and Word.
-
--   **Narrative Text**: You can write plain text, formatted with Markdown for headings, lists, links, images, and more.
-
--   **Embedded Outputs**: Results from code chunks can be embedded directly into the document, including tables, plots, and statistical summaries.
-
--   **Cross-references**: Quarto allows you to cross-reference figures, tables, and sections, enhancing the document’s structure.
-
-# How to Use Quarto Documents
-
-**Step 1: Install Quarto**
-
--   Download and install Quarto from the [Quarto website](https://quarto.org/docs/websites/)
-
--   If you're using RStudio, ensure it is updated to the latest version for the best compatibility.
-
-**Step 2: Create a New Quarto Document**
-
-1.  **In RStudio**:
-
--   Go to **File \> New File \> Quarto Document**.
-
--   Choose a template if prompted, and save the file with a **.qmd** extension. Using the Command Line:
-
-2.  **Using the Command Line**:
-
-You can create a new Quarto file by running:
-
-``` {bash}
-quarto create my_document.qmd
 ```
-
-**Step 3: Write Your Quarto Document**
-
--   **Header**: At the top of the document, specify metadata in YAML format:
-
-```{yaml}
----
-title: "My Quarto Document"
-author: "Your Name"
-date: "2024-10-20"
-format: html
----
-```
-
--   **Narrative Text**: Use Markdown to format your text:
-
-```{markdown}
 ## Introduction
 
 This is a simple Quarto document. You can use **bold** text, *italic* text, and create lists:
@@ -94,35 +57,38 @@ This is a simple Quarto document. You can use **bold** text, *italic* text, and 
 
 -   **Code Chunks**: Insert code chunks with the following syntax:
 
+
 ```{r, eval = FALSE}
-# R code goes here
-summary(cars)
+# R code example
+#summary(cars)
 ```
+
+
 
 ```{python}
 # Python code goes here
-import numpy as np
-np.random.rand(5)
+#import numpy as np
+#np.random.rand(5)
 ```
 
 **Step 4: Render the Document**
 
 To render the document into the desired output format (HTML, PDF, etc.), use the following command in the terminal or RStudio:
 
-```{bash}
+```
 quarto render my_document.qmd --to html
 ```
 
 If you want to open the rendered document immediately, use:
 
-```{bash}
+```
 quarto render my_document.qmd --to html --open
 ```
 
 ::: {.callout .callout-additional collapse="false"}
 # Additional Tips
 
--   **Customize Your Document**: You can customize the appearance and layout of your Quarto documents using themes and templates. Refer to the [Quarto documentation]([https://quarto.org/) for more details.
+-   **Customize Your Document**: You can customize the appearance and layout of your Quarto documents using themes and templates. Refer to the [Quarto documentation](%5Bhttps://quarto.org/) for more details.
 
 -   **Use Code Folding**: Consider enabling code folding for long code chunks to make your document cleaner and more navigable.
 
@@ -130,7 +96,7 @@ quarto render my_document.qmd --to html --open
 
 -   **Publishing**: Quarto supports publishing documents directly to platforms like GitHub Pages or RStudio Connect.
 
-* **Version Control**: Integrate Quarto documents with Git and GitHub for version control and collaboration.
+-   **Version Control**: Integrate Quarto documents with Git and GitHub for version control and collaboration.
 :::
 
 # Conclusion

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Martin Nyamu &amp; Kenneth Gatungo">
 
-<title>1&nbsp; Introduction – Guide to Using GitHub with R and Quarto Documents</title>
+<title>6&nbsp; Python Code in Quarto Document – Guide to Using GitHub with R and Quarto Documents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./QuartoDoc.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./Python_inR.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -88,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PythonCode.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Code in Quarto Document</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -188,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PythonCode.html" class="sidebar-item-text sidebar-link">
+  <a href="./PythonCode.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Code in Quarto Document</span></span></a>
   </div>
 </li>
@@ -202,8 +201,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">3</span> Prerequisites</a></li>
+  <li><a href="#use-of-python-code-in-quarto-document" id="toc-use-of-python-code-in-quarto-document" class="nav-link active" data-scroll-target="#use-of-python-code-in-quarto-document"><span class="header-section-number">6.1</span> Use of Python Code in Quarto Document</a></li>
+  <li><a href="#steps-to-follow" id="toc-steps-to-follow" class="nav-link" data-scroll-target="#steps-to-follow"><span class="header-section-number">6.2</span> Steps To Follow</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/analystnyamu/Learning-Insights/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -212,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Code in Quarto Document</span></h1>
 </div>
 
 
@@ -229,17 +228,97 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
-<p>In this guide, you’ll learn how to use GitHub with R to produce Quarto documents and integrate Python code with R. We will cover the essential steps to create a GitHub repository, pull changes to your local machine, and utilize basic Git and GitHub commands required for these tasks. By the end of this guide, you will have a solid foundation for managing your projects effectively.</p>
+<section id="use-of-python-code-in-quarto-document" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="use-of-python-code-in-quarto-document"><span class="header-section-number">6.1</span> Use of Python Code in Quarto Document</h2>
+<p>To use Python code in a Quarto document, you can embed Python code chunks in your <code>.qmd</code> file. Quarto supports several programming languages, including Python, and allows you to execute code in the document, similar to how <code>Jupyter Notebooks</code> work.</p>
+<p>Here’s how to include and run Python code in a Quarto document.</p>
 </section>
-<section id="prerequisites" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Prerequisites</h1>
+<section id="steps-to-follow" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="steps-to-follow"><span class="header-section-number">6.2</span> Steps To Follow</h2>
+<ol type="1">
+<li><strong>Install Required Tools</strong></li>
+</ol>
 <ul>
-<li>A <a href="https://github.com">GitHub account</a></li>
-<li>Git installed on your local machine (<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git installation guide</a>)</li>
-<li>Basic familiarity with the command line interface (CLI)</li>
+<li><p>Make sure you have <strong>Python</strong> installed.</p></li>
+<li><p>Install <strong>Jupyter</strong> if you haven’t already, as Quarto uses Jupyter to execute Python code.</p></li>
 </ul>
+<p>You can install Jupyter using the following command:</p>
+<pre class="{bash}"><code>pip install jupyter</code></pre>
+<ol start="2" type="1">
+<li><strong>Set up Quarto</strong></li>
+</ol>
+<ul>
+<li>Install Quarto if you haven’t done so. You can download and install it from <a href="https://quarto.org/">quarto.org</a></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Write Python Code in Quarto Document</strong></li>
+</ol>
+<p>In your Quarto document <code>(.qmd)</code>, you can include Python code chunks by specifying <code>{python}</code> at the start of the chunk.</p>
+<pre class="{markdown}"><code>---
+title: "Python in Quarto"
+format:
+  html: default
+  pdf: default
+---
+
+# Python Example in Quarto
+
+Here’s a simple Python example embedded in a Quarto document.
+
+# Python code
+import numpy as np
+
+# Generate random numbers
+random_numbers = np.random.rand(5)
+random_numbers</code></pre>
+<pre class="{yaml}"><code>
+### 4. Render the Quarto Document
+
+You can render the Quarto document using:
+
+- In the terminal: 
+
+quarto render your_document.qmd</code></pre>
+<ul>
+<li>In Visual Studio Code or RStudio: Use the <strong>Render</strong> button if you are working with these editors. The output will include both the code and its result in the specified format (HTML, PDF, etc.).</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Output Formats</strong></li>
+</ol>
+<p>Quarto supports various output formats (e.g., HTML, PDF, MS Word). Specify the format in the YAML header at the top of your .qmd file:</p>
+<pre class="{yaml}"><code>---
+title: "Python Example in Quarto"
+format: 
+  html: default
+  pdf: default
+---</code></pre>
+<p><strong>Example of a Full Quarto Document with Python Code</strong></p>
+<pre class="{markdown}"><code>---
+title: "Python in Quarto Example"
+format: html
+---
+
+# Using Python in Quarto
+
+You can run Python code directly within Quarto documents.
+
+# Import the necessary library
+import numpy as np
+
+# Generate 10 random numbers
+random_numbers = np.random.rand(10)
+random_numbers</code></pre>
+<p>The output of the Python code will be rendered inline in your document.</p>
+<pre class="{markdown}"><code>
+### 6. Additional Tips
+- **Code Chunk Options**: You can control the output behavior of Python code chunks using options like `echo`, `eval`, `include`, and `results`.
+  - `echo`: Whether to show the code in the output (`true` or `false`).
+  - `eval`: Whether to evaluate the code chunk (`true` or `false`).
+  - `results`: How to display the results (`"asis"` for raw output, `"hide"` to hide results).
+
+Example:
+print("This is a Python print statement")</code></pre>
+<p>ssh-keygen -t ed25519 -C “analystnyamu79@gmail.com”</p>
 
 
 </section>
@@ -667,14 +746,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./Python_inR.html" class="pagination-link" aria-label="Installing Python Packages in R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Installing Python Packages in R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./QuartoDoc.html" class="pagination-link" aria-label="Quarto Documents">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quarto Documents</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

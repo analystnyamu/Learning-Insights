@@ -6,7 +6,7 @@ editor: visual
 
 ## How to intall python packages in R
 
-To install Python packages in R, you can use the reticulate package, which provides an interface to run Python code and manage Python environments within R. Here’s how to install and use Python packages in R:
+To install Python packages in R, you can use the reticulate package, which provides an interface to run Python code and manage Python environments within R. Here's how to install and use Python packages in R:
 
 ## Steps To Follow
 
@@ -14,7 +14,7 @@ To install Python packages in R, you can use the reticulate package, which provi
 
 First, install and load the reticulate package in R. This package allows you to work with Python in R.
 
-```{r}
+```
 install.packages("reticulate")
 library(reticulate)
 ```
@@ -23,17 +23,17 @@ library(reticulate)
 
 reticulate can work with your existing Python environments (such as those created by Anaconda) or with a new environment created in R.
 
-*  **To use a Conda environment** (if you're using Anaconda):
+-   **To use a Conda environment** (if you're using Anaconda):
 
 Specify the Python environment (replace "your_conda_env" with the name of your environment):
 
-```{r}
+```
 use_condaenv("C:\\Users\DELL\\anaconda3", required = TRUE)
 ```
 
 You can also list available `conda` environments using:
 
-```{r}
+```
 conda_list()
 ```
 
@@ -41,7 +41,7 @@ conda_list()
 
 If you want to point directly to a Python executable (e.g., /usr/bin/python):
 
-```{r}
+```
 use_python("/path/to/python", required = TRUE)
 ```
 
@@ -49,9 +49,9 @@ use_python("/path/to/python", required = TRUE)
 
 You can install Python packages directly from R using py_install(), which wraps the installation process of `pip` or `conda`.
 
-*  **Using `pip` to install Python packages**:
+-   **Using `pip` to install Python packages**:
 
-```{r}
+```
 py_install("package_name")
 ```
 
@@ -59,7 +59,7 @@ This command installs the specified Python package (e.g., "numpy", "pandas", etc
 
 -   **Using `conda` to install Python packages** (if using a Conda environment):
 
-```{r}
+```
 conda_install("your_conda_env", "package_name")
 ```
 
@@ -67,7 +67,7 @@ Replace "**your_conda_env**" with the name of your Conda environment and "**pack
 
 4.  **Using the Installed Python Package in R**
 
-```{r}
+```
 library(reticulate)
 numpy <- import("numpy")
 print(numpy$array(c(1, 2, 3)))
@@ -78,9 +78,9 @@ This example shows how to import the numpy Python library and use it within R.
 ::: {.callout .callout-additional collapse="false"}
 ## Example Workflow
 
-Here’s an example of how to install and use the pandas Python package in R: After installing the Python package, you can import and use it in R:
+Here's an example of how to install and use the pandas Python package in R: After installing the Python package, you can import and use it in R:
 
-```{r}
+```
 # Install reticulate package
 install.packages("reticulate")
 
